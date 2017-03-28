@@ -3,11 +3,11 @@
 
 ## This prototype is a very basic implementation of the School Management System. To view the complete website
 
-##Credentials for school admin
+## Credentials for school admin
 ### **Email** - jainamritanshu@gmail.com
 ### **Passsword** - ashujain
 
-##Credentials for student
+## Credentials for student
 ### **Email** - jainamritanshu1997@gmail.com
 ### **Passsword** - ashujain
 
