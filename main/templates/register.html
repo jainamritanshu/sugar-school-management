@@ -1,0 +1,168 @@
+{% load static from staticfiles %}
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Register | Personalised Test Assessment</title>
+  <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Roboto:300,400,500,700">
+  <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/icon?family=Material+Icons">
+
+  <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+  <link rel="stylesheet" href="{% static 'css/bootstrap-material-design.css' %}">
+  <link rel="stylesheet" href="{% static 'css/ripples.min.css' %}">
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  <link rel="stylesheet" href="{% static 'css/jquery.dropdown.css' %}">
+  <script src="{% static 'js/jquery-2.2.4.min.js' %}"></script>
+  <script src="{% static 'js/actions_register.js' %}"></script>
+  <script src="{% static 'js/bootstrap.min.js' %}"></script>
+  <script src="{% static 'js/material.min.js' %}"></script>
+  <script src="{% static 'js/ripples.min.js' %}"></script>
+  <style>
+  .dropdownjs .close{
+    display: none !important;
+  }
+  </style>
+
+</head>
+<body>
+  <nav class="navbar navbar-fixed-up">
+    <div class="container">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="http://www.sugarlabs.org">
+          <img alt="Brand" src="{% static 'img/logo.png' %}" />
+        </a>
+      </div>
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+          <p class="navbar-btn">
+            <a href="../login" class="btn btn-info btn-raised">Login</a>
+          </p>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="container" style="margin-top:16vh">
+    <div class="row">
+      <div class="col-xs-10 col-md-6 col-md-offset-3 col-xs-offset-1" id="login">
+        <div class="well">
+          <legend class="text-info">Register
+          <span class="text-short-info">Register as <a href="/user/school_register">School</a></span>
+          </legend>
+          <div class="row">
+            <div class="col-md-10 col-md-offset-1">
+              <form role="form" class="form-horizontal" id="registerForm" autocomplete="on" name="registerForm" method="POST">
+                <fieldset>
+
+                  <div class="form-group">
+                    <label class="control-label col-md-2" for="st_name"> Name</label>
+                    <div class="col-md-10">
+                      <input type="text" class="form-control" name="st_name" required >
+                      <p class="help-block">You need to climb aboard with a name</p>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="control-label col-md-2" for="st_dob">Birthday</label>
+                    <div class="col-md-10">
+                      <input type="date" class="form-control" name="st_dob" >
+                      <p class="help-block">We would hate to miss wishing you.</p>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label  class="control-label col-md-2" for="st_class">Class</label>
+                    <div class="col-md-10">
+                      <select name="st_class" class="select form-control" required  >
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                      </select>
+                      <p class="help-block">Which class do u sail</p>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="control-label col-md-2" for="st_city_res"> City</label>
+                    <div class="col-md-10" id="st_city_res">
+                      <input type="text" class="form-control" name="st_city_res" required >
+                      <p class="help-block">Where do you hail from?</p>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="control-label col-md-2" for="st_city_sc" >School City</label>
+                    <div class="col-md-10" id="st_city_sc">
+                      <select name="st_city_sc" class="select form-control" required>
+                      </select>
+                      <p class="help-block">Your school resides in?</p>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label  class="control-label col-md-2" for="st_sc">School</label>
+                    <div class="col-md-10 " id="schoolList">
+                      <select name="st_sc" class="select form-control" required>
+                      </select>
+                      <p class="help-block">Your place of having fun</p>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="control-label col-md-2" for="st_email"> Email</label>
+                    <div class="col-md-10">
+                      <input type="email" class="form-control" name="st_email" required >
+                      <p class="help-block">That is where we will send your pigeons</p>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="control-label col-md-2" for="contact"> Contact</label>
+                    <div class="col-md-10">
+                      <input type="text" class="form-control" name="contact" required >
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="control-label col-md-2" for="st_pass"> Password</label>
+                    <div class="col-md-10">
+                      <input type="password" class="form-control" name="st_pass" required  >
+                      <p class="help-block">Makes you feel secure</p>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="control-label col-md-2" for="st_conf"> Confirm Password</label>
+                    <div class="col-md-10">
+                      <input type="password" class="form-control" name="st_conf" required  >
+                      <p class="help-block">Its better to cross check</p>
+                    </div>
+                  </div>
+                  <!-- <div class="form-group is-empty is-fileinput">
+                  <label for="profilePic" class="col-md-2 control-label">Profile Picture</label>
+                  <div class="col-md-10">
+                  <input type="text" readonly="" class="form-control" placeholder="Browse...">
+                  <input type="file" name="profilePic" accept="image/*">
+                </div>
+              </div> -->
+              <div class="form-group">
+                <div class="col-md-8 col-md-offset-2 text-center">
+                  <button type="submit" class="btn btn-info btn-raised" id="registerSubmit">Submit</button>
+                </div>
+              </div>
+            </fieldset>
+          </form>
+        </div>
+      </div>
+      <div class="row" style="margin-top: 4vh;">
+        <div class="col-md-10 col-md-offset-1 submitError"></div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+<script src="{% static 'js/jquery.dropdown.js' %}"></script>
+<script>
+$(document).ready(function() {
+  $(".select").dropdown({"optionClass": "withripple"});
+});
+// $().dropdown({autoinit: "select"});
+</script>
+</body>
+</html>

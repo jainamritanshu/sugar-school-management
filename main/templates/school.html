@@ -1,0 +1,115 @@
+{% load static from staticfiles %}
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dashboard | Personalised Test Assessment</title>
+  <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Roboto:300,400,500,700">
+  <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+  <link rel="stylesheet" href="{% static 'css/bootstrap-material-design.css' %}">
+  <link rel="stylesheet" href="{% static 'css/ripples.min.css' %}">
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  <link rel="stylesheet" href="{% static 'css/jquery.dropdown.css' %}">
+  <script src="{% static 'js/jquery-2.2.4.min.js' %}"></script>
+  <script src="{% static 'js/actions_school.js' %}"></script>
+  <script src="{% static 'js/bootstrap.min.js' %}"></script>
+  <script src="{% static 'js/material.min.js' %}"></script>
+  <script src="{% static 'js/ripples.min.js' %}"></script>
+
+</head>
+<body>
+  <nav class="navbar navbar-fixed-up">
+    <div class="container">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="http://www.sugarlabs.org">
+          <img alt="Brand" src="{% static 'img/logo.png' %}" />
+        </a>
+      </div>
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+          <p class="navbar-btn">
+            <a href="../logout" class="btn btn-info btn-raised">Logout</a>
+          </p>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="row">
+    <div class="col-xs-2" >
+      <div class="container-fluid" style="width:100%;padding:0">
+        <div class="well sideBar">
+          <div class="row">
+            <div class="col-xs-6 col-xs-offset-3">
+              <a href="#" class="thumbnail">
+                <i class="material-icons">school</i>
+              </a>
+            </div>
+          </div>
+          <hr/>
+          <div class="row">
+            <div class="col-xs-12">
+              <ul class="nav nav-list" style="max-width: 300px;">
+                <li id="home" ><a href="#home"><span style="margin-right:15px"><i class="material-icons">home</i></span><span class="hidden-xs" style="text-align:left">Home</span></a></li>
+                <li id="details" ><a href="#details"><span style="margin-right:15px"><i class="material-icons">event_note</i></span><span class="hidden-xs"  style="text-align:left">Details</span></a> </li>
+                <li id="enroll" ><a href="#enroll"><span style="margin-right:15px"><i class="material-icons">group_add</i></span><span class="hidden-xs"  style="text-align:left">Enroll</span></a> </li>
+                <li id="payment" ><a href="#payment"><span style="margin-right:15px"><i class="material-icons">payment</i></span><span class="hidden-xs"  style="text-align:left">Payment</span></a> </li>
+                <li id="status" ><a href="#status"><span style="margin-right:15px"><i class="material-icons">sort</i></span><span class="hidden-xs"  style="text-align:left">Status</span></a> </li>
+                <li id="downloads"><a href="#downloads"><span style="margin-right:15px"><i class="material-icons">file_download</i></span><span class="hidden-xs"  style="text-align:left">Downloads</span></a> </li>
+                <li id="results"><a href="#results"><span style="margin-right:15px"><i class="material-icons">show_chart</i></span><span class="hidden-xs"  style="text-align:left">Results</span></a> </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-xs-10">
+      <div class="row head">
+        <div class="container-fluid">
+          <div class="col-md-10 ">
+            <div class="well">
+              <h4>Dashboard</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="container-fluid">
+          <div class="col-md-10 infoBox main">
+            <div class="well">
+              <div class="container-fluid">
+                <div class="row">
+                  <div class="page-header">
+                    <h4>Basic Info <span style="float:right"><i class="material-icons edit">mode_edit</i></span></h4>
+                  </div>
+                </div>
+                <div class="row mainBox">
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- <div class="col-md-5  infoBox side">
+            <div class="well">
+              <div class="container-fluid">
+                <div class="row">
+                  <div class="page-header">
+                    <h4>Summary</h4>
+                  </div>
+                </div>
+                <div class="row sideBox">
+                </div>
+              </div>
+            </div>
+          </div> -->
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+  // console.log(pay);
+
+
+  </script>
+</body>
+</html>
