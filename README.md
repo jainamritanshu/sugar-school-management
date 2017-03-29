@@ -3,7 +3,7 @@
 
 ## This prototype is a very basic implementation of the School Management System. To view the complete website
 
-## To view the web application follow this [link](106.186.23.14:8000/user/login/)
+## To view the web application follow this [link](http://106.186.23.14:8000/user/login/)
 
 ## Credentials for school admin
 ### **Email** - jainamritanshu@gmail.com
